@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 960px; /* this things inside the container won't go over this width */
+  margin-right: auto;/* helps keeps things centred no matter the size of the screen */
+  margin-left: auto;
+  padding-right: 15px; /* this will stop the notes from being pushed to the ends of the screen */
+  padding-left: 15px;
+}
+
+.notes-list {
+  display: grid; /* notes list div is now a css grid container */
+  grid-gap: 1rem; /* this adds space around each grid container aka the notes */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* automatically resizes columns and limits it to 250px in size*/
+}
+
+.note {
+  background-color: #f59348;
+  /* margin-bottom: 10px; this adds individual rectangles to each note */
+  border-radius: 10px; /* this makes the edges curved */
+  padding: 1rem; /* this adds height to the rectangles, rem = relative to the font size
+  so if i change the font size the rectangle will change accordingly*/
+  min-height: 170px; /* so all our notes are the same height */
+  display: flex;
+  flex-direction: column; /* this makes the items stack right underneath each other */
+  justify-content: space-between; /* this makes the items in the container space out evenly
+  with the first item at the top and second at the bottom. */
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* margin-bottom from .note removed */
